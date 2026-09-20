@@ -6,23 +6,21 @@
 
 <meta name="description" content="Safe Keepers Place Transport LLC — family-owned student and senior transportation serving school districts and specialized programs across the Kansas City metro.">
 <meta name="author" content="Safe Keepers Place Transport LLC">
-<meta name="theme-color" content="#1C4A3C">
-
-<!-- TODO once you have a domain: uncomment and set the real address.
-<link rel="canonical" href="https://YOURDOMAIN.com/">
-<meta property="og:url" content="https://YOURDOMAIN.com/">
--->
+<meta name="theme-color" content="#2B323C">
+<link rel="canonical" href="https://safekeepersplace.org/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Safe Keepers Place Transport LLC">
 <meta property="og:title" content="Safe Keepers Place Transport LLC">
 <meta property="og:description" content="Family-owned student and senior transportation across the Kansas City metro.">
-<!-- TODO: add a photo of a bus/van (1200x630) to the repo as social-card.jpg, then uncomment:
-<meta property="og:image" content="https://YOURDOMAIN.com/social-card.jpg">
+<meta property="og:url" content="https://safekeepersplace.org/">
+<!-- TODO: add a 1200x630 photo of a bus or van to the repo as social-card.jpg, then uncomment:
+<meta property="og:image" content="https://safekeepersplace.org/social-card.jpg">
+<meta property="og:image:alt" content="A Safe Keepers Place vehicle.">
 -->
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5 3.6 7.4v9.1c0 7.1 5.1 11.9 12.4 13.9 7.3-2 12.4-6.8 12.4-13.9V7.4z' fill='%231C4A3C'/%3E%3Cpath d='M10.3 16.4 14.4 20.4 22 12.4' fill='none' stroke='%23E3A008' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B323C'/%3E%3Cpath d='M8 27C12 18 19 12 25 7' fill='none' stroke='%23F3BF03' stroke-width='4' stroke-linecap='round' stroke-dasharray='4.5 5'/%3E%3C/svg%3E">
 
 <style>
   :root{
@@ -40,20 +38,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <style>
   :root{
-    --ground:#F6F7F4;
+    --ground:#F6F6F5;
     --surface:#FFFFFF;
-    --surface-sunk:#EDEFEA;
-    --ink:#15251F;
-    --ink-soft:#4E605A;
-    --ink-faint:#7A8A84;
-    --line:#DCE1DA;
-    --line-strong:#C3CCC3;
-    --pine:#1C4A3C;
-    --pine-deep:#12342A;
-    --pine-tint:#E6EEE9;
-    --gold:#C88A0C;
-    --gold-bright:#E3A008;
-    --on-pine:#EAF2ED;
+    --surface-sunk:#ECEDEB;
+    --ink:#1B2029;
+    --ink-soft:#525A67;
+    --ink-faint:#828A96;
+    --line:#DEE0E2;
+    --line-strong:#C3C7CC;
+    --brand:#2B323C;
+    --brand-deep:#1B2029;
+    --brand-tint:#E8EAEC;
+    --gold:#F3BF03;
+    --on-brand:#EAECEF;
 
     --f-display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
     --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
@@ -68,37 +65,35 @@
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --ground:#0E1613;
-      --surface:#16211D;
-      --surface-sunk:#111A17;
-      --ink:#E9F0EC;
-      --ink-soft:#A8B8B1;
-      --ink-faint:#7E908A;
-      --line:#26332E;
-      --line-strong:#33443D;
-      --pine:#8FC9B1;
-      --pine-deep:#0B1512;
-      --pine-tint:#17261F;
-      --gold:#F0B32B;
-      --gold-bright:#F5C247;
-      --on-pine:#E9F0EC;
+      --ground:#12151A;
+      --surface:#1A1F26;
+      --surface-sunk:#161A20;
+      --ink:#EAECEF;
+      --ink-soft:#A6AEBA;
+      --ink-faint:#7C8593;
+      --line:#282E36;
+      --line-strong:#39404A;
+      --brand:#AFBCCC;
+      --brand-deep:#0E1116;
+      --brand-tint:#1B2029;
+      --gold:#F3BF03;
+      --on-brand:#EAECEF;
     }
   }
   :root[data-theme="dark"]{
-    --ground:#0E1613;
-    --surface:#16211D;
-    --surface-sunk:#111A17;
-    --ink:#E9F0EC;
-    --ink-soft:#A8B8B1;
-    --ink-faint:#7E908A;
-    --line:#26332E;
-    --line-strong:#33443D;
-    --pine:#8FC9B1;
-    --pine-deep:#0B1512;
-    --pine-tint:#17261F;
-    --gold:#F0B32B;
-    --gold-bright:#F5C247;
-    --on-pine:#E9F0EC;
+    --ground:#12151A;
+    --surface:#1A1F26;
+    --surface-sunk:#161A20;
+    --ink:#EAECEF;
+    --ink-soft:#A6AEBA;
+    --ink-faint:#7C8593;
+    --line:#282E36;
+    --line-strong:#39404A;
+    --brand:#AFBCCC;
+    --brand-deep:#0E1116;
+    --brand-tint:#1B2029;
+    --gold:#F3BF03;
+    --on-brand:#EAECEF;
   }
 
   *{box-sizing:border-box;}
@@ -115,7 +110,7 @@
   h1,h2,h3{text-wrap:balance;margin:0;line-height:1.1;letter-spacing:-0.02em;}
   p{margin:0;}
   a{color:inherit;}
-  :focus-visible{outline:2.5px solid var(--gold-bright);outline-offset:3px;border-radius:2px;}
+  :focus-visible{outline:2.5px solid var(--brand);outline-offset:3px;border-radius:2px;}
 
   .wrap{width:min(1120px,100%);margin-inline:auto;padding-inline:clamp(20px,5vw,52px);}
 
@@ -152,11 +147,16 @@
     display:flex;align-items:center;justify-content:space-between;
     gap:20px;padding-block:14px;
   }
-  .mark{display:flex;align-items:center;gap:11px;text-decoration:none;}
-  .mark svg{display:block;flex:none;}
-  .mark-text{display:flex;flex-direction:column;line-height:1.15;}
-  .mark-name{font-family:var(--f-display);font-weight:700;font-size:1.02rem;letter-spacing:-0.015em;}
-  .mark-sub{font-family:var(--f-display);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-faint);}
+  .mark{display:block;text-decoration:none;flex:none;}
+  .mark img{display:block;height:44px;width:auto;}
+  @media (max-width:520px){ .mark img{height:34px;} }
+  .mark img.logo-dark{display:none;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .mark img.logo-light{display:none;}
+    :root:not([data-theme="light"]) .mark img.logo-dark{display:block;}
+  }
+  :root[data-theme="dark"] .mark img.logo-light{display:none;}
+  :root[data-theme="dark"] .mark img.logo-dark{display:block;}
   .nav{display:flex;align-items:center;gap:26px;}
   .nav a{
     font-family:var(--f-display);font-size:var(--step-sm);font-weight:500;
@@ -164,11 +164,11 @@
   }
   .nav a:hover{color:var(--ink);}
   .nav .call{
-    color:var(--pine);font-weight:600;
+    color:var(--brand);font-weight:600;
     border:1px solid var(--line-strong);border-radius:999px;
     padding:7px 15px;white-space:nowrap;
   }
-  .nav .call:hover{border-color:var(--pine);color:var(--pine);}
+  .nav .call:hover{border-color:var(--brand);color:var(--brand);}
   @media (max-width:760px){ .nav a:not(.call){display:none;} }
 
   /* ---------- hero ---------- */
@@ -176,7 +176,13 @@
   .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);gap:clamp(32px,5vw,64px);align-items:end;}
   @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;align-items:start;} }
   h1{font-size:var(--step-3xl);font-weight:700;}
-  h1 em{font-style:normal;color:var(--pine);}
+  h1 em{
+    font-style:normal;
+    background-image:linear-gradient(var(--gold),var(--gold));
+    background-repeat:no-repeat;
+    background-size:100% 0.16em;
+    background-position:0 92%;
+  }
   .hero-lede{
     margin-top:22px;font-size:var(--step-lg);color:var(--ink-soft);
     max-width:34ch;
@@ -188,20 +194,20 @@
     display:inline-flex;align-items:center;gap:9px;
     border:1px solid transparent;transition:background .15s ease,border-color .15s ease;
   }
-  .btn-primary{background:var(--pine);color:var(--on-pine);}
+  .btn-primary{background:var(--brand);color:var(--on-brand);}
   :root[data-theme="dark"] .btn-primary,
-  .btn-primary{color:var(--on-pine);}
+  .btn-primary{color:var(--on-brand);}
   @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .btn-primary{background:var(--pine);color:var(--pine-deep);}
+    :root:not([data-theme="light"]) .btn-primary{background:var(--brand);color:var(--brand-deep);}
   }
-  :root[data-theme="dark"] .btn-primary{background:var(--pine);color:var(--pine-deep);}
-  .btn-primary:hover{background:var(--pine-deep);}
+  :root[data-theme="dark"] .btn-primary{background:var(--brand);color:var(--brand-deep);}
+  .btn-primary:hover{background:var(--brand-deep);}
   @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .btn-primary:hover{background:var(--on-pine);}
+    :root:not([data-theme="light"]) .btn-primary:hover{background:var(--on-brand);}
   }
-  :root[data-theme="dark"] .btn-primary:hover{background:var(--on-pine);}
+  :root[data-theme="dark"] .btn-primary:hover{background:var(--on-brand);}
   .btn-ghost{border-color:var(--line-strong);color:var(--ink);}
-  .btn-ghost:hover{border-color:var(--pine);}
+  .btn-ghost:hover{border-color:var(--brand);}
 
   .hero-aside{
     border-left:3px solid var(--gold);
@@ -239,7 +245,7 @@
   .svc{background:var(--surface);padding:30px 26px 32px;display:flex;flex-direction:column;gap:12px;}
   .svc h3{font-size:var(--step-lg);font-weight:600;}
   .svc p{color:var(--ink-soft);font-size:var(--step-sm);line-height:1.6;}
-  .svc .ico{color:var(--pine);}
+  .svc .ico{color:var(--brand);}
   .svc .ico svg{display:block;}
 
   /* service area */
@@ -258,7 +264,7 @@
   .area-note{margin-top:20px;font-size:var(--step-sm);color:var(--ink-soft);}
 
   /* mission */
-  .mission{background:var(--pine-deep);color:var(--on-pine);}
+  .mission{background:var(--brand-deep);color:var(--on-brand);}
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]) .mission{background:var(--surface-sunk);}
   }
@@ -270,15 +276,15 @@
     line-height:1.32;font-weight:600;letter-spacing:-0.015em;
     max-width:24ch;text-wrap:balance;
   }
-  .mission-say{margin-top:22px;max-width:46ch;color:color-mix(in srgb,var(--on-pine) 76%,transparent);font-size:var(--step-lg);}
+  .mission-say{margin-top:22px;max-width:46ch;color:color-mix(in srgb,var(--on-brand) 76%,transparent);font-size:var(--step-lg);}
   .mission-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(34px,6vw,72px);align-items:start;}
   @media (max-width:860px){ .mission-grid{grid-template-columns:1fr;} }
   .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px 32px;}
   .val h3{
     font-family:var(--f-display);font-size:var(--step-md);font-weight:600;
-    color:var(--gold-bright);margin-bottom:6px;
+    color:var(--gold);margin-bottom:6px;
   }
-  .val p{font-size:var(--step-sm);line-height:1.58;color:color-mix(in srgb,var(--on-pine) 70%,transparent);}
+  .val p{font-size:var(--step-sm);line-height:1.58;color:color-mix(in srgb,var(--on-brand) 70%,transparent);}
 
   /* contact */
   .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:clamp(28px,4vw,44px);align-items:start;}
@@ -290,7 +296,7 @@
     line-height:1.2;letter-spacing:-0.02em;color:var(--ink);
     overflow-wrap:anywhere;
   }
-  a.cline:hover .val{color:var(--pine);}
+  a.cline:hover .val{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--gold);}
   .cline .sub{display:block;font-size:var(--step-sm);line-height:1.5;color:var(--ink-soft);margin-top:7px;}
 
   /* footer */
@@ -304,13 +310,16 @@
     *{animation-duration:.001ms!important;transition-duration:.001ms!important;}
   }
 </style>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "additionalType": "https://schema.org/TaxiService",
-  "name": "Safe Keepers Place Transport LLC",
+  "name": "Safe Keepers Place LLC",
+  "slogan": "For all your transportation needs",
+  "url": "https://safekeepersplace.org/",
+  "logo": "https://safekeepersplace.org/logo.png",
+  "image": "https://safekeepersplace.org/logo.png",
   "description": "Family-owned student and senior transportation serving school districts and specialized education programs across the Kansas City metro.",
   "telephone": "+1-816-621-9785",
   "email": "safekeepers.transport@gmail.com",
@@ -328,20 +337,13 @@
   "sameAs": ["https://www.facebook.com/profile.php?id=100070250382953"]
 }
 </script>
-
 </head>
 <body>
 <header class="site-head">
   <div class="wrap head-in">
-    <a class="mark" href="#top">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 2.5 3.6 7.4v9.1c0 7.1 5.1 11.9 12.4 13.9 7.3-2 12.4-6.8 12.4-13.9V7.4z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
-        <path d="M10.3 16.4 14.4 20.4 22 12.4" fill="none" stroke="#C88A0C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="mark-text">
-        <span class="mark-name">Safe Keepers Place</span>
-        <span class="mark-sub">Transport&nbsp;LLC</span>
-      </span>
+    <a class="mark" href="#top" aria-label="Safe Keepers Place LLC — home">
+      <img class="logo-light" src="logo.png" width="560" height="168" alt="">
+      <img class="logo-dark" src="logo-dark.png" width="560" height="168" alt="">
     </a>
     <nav class="nav">
       <a href="#services">What we do</a>
@@ -533,7 +535,7 @@
 
 <footer>
   <div class="wrap foot-in">
-    <span>&copy; 2026 Safe Keepers Place Transport LLC &middot; Kansas City, Missouri</span>
+    <span>&copy; 2026 Safe Keepers Place LLC &middot; For all your transportation needs</span>
     <span>USDOT #3278150 &middot; <a href="tel:+18166219785">(816) 621-9785</a></span>
   </div>
 </footer>
