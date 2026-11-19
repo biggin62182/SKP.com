@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to use Rider Log | Safe Keepers Place Transport LLC</title>
+<meta name="description" content="Step-by-step guide for Safe Keepers Place drivers using the Rider Log app: filling out a rider, saving, signing, and compiling the monthly PDF.">
+<meta name="theme-color" content="#2B323C">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://safekeepersplace.com/rider-log-guide.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B323C'/%3E%3Cpath d='M8 27C12 18 19 12 25 7' fill='none' stroke='%23F3BF03' stroke-width='4' stroke-linecap='round' stroke-dasharray='4.5 5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root{
+    color-scheme:light dark;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    --ground:#F6F6F5; --surface:#FFFFFF; --surface-sunk:#ECEDEB;
+    --ink:#1B2029; --ink-soft:#525A67; --ink-faint:#828A96;
+    --line:#DEE0E2; --line-strong:#C3C7CC;
+    --brand:#2B323C; --brand-deep:#1B2029; --gold:#F3BF03; --on-brand:#EAECEF;
+    --f-display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --step-xs:0.78rem; --step-sm:0.93rem; --step-md:1.0625rem;
+    --step-lg:1.22rem; --step-xl:1.6rem;
+    --step-2xl:clamp(1.8rem,4vw,2.4rem); --step-3xl:clamp(2.2rem,5.6vw,3.2rem);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#12151A; --surface:#1A1F26; --surface-sunk:#161A20;
+      --ink:#EAECEF; --ink-soft:#A6AEBA; --ink-faint:#7C8593;
+      --line:#282E36; --line-strong:#39404A;
+      --brand:#AFBCCC; --brand-deep:#0E1116; --gold:#F3BF03; --on-brand:#EAECEF;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#12151A; --surface:#1A1F26; --surface-sunk:#161A20;
+    --ink:#EAECEF; --ink-soft:#A6AEBA; --ink-faint:#7C8593;
+    --line:#282E36; --line-strong:#39404A;
+    --brand:#AFBCCC; --brand-deep:#0E1116; --gold:#F3BF03; --on-brand:#EAECEF;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--f-body);font-size:var(--step-md);line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.12;letter-spacing:-0.02em;text-wrap:balance;}
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;}
+  :focus-visible{outline:2.5px solid var(--brand);outline-offset:3px;border-radius:2px;}
+  .wrap{width:min(760px,100%);margin-inline:auto;padding-inline:clamp(20px,5vw,40px);}
+
+  .eyebrow{
+    font-family:var(--f-display);font-size:var(--step-xs);font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
+  }
+  .hazard{
+    height:7px;opacity:.85;
+    background:repeating-linear-gradient(-55deg,var(--gold) 0 10px,transparent 10px 22px);
+  }
+
+  /* header */
+  .site-head{
+    position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+    background:color-mix(in srgb,var(--ground) 90%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  }
+  .head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;}
+  .mark{display:block;text-decoration:none;flex:none;}
+  .mark img{display:block;height:36px;width:auto;}
+  .mark img.logo-dark{display:none;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .mark img.logo-light{display:none;}
+    :root:not([data-theme="light"]) .mark img.logo-dark{display:block;}
+  }
+  :root[data-theme="dark"] .mark img.logo-light{display:none;}
+  :root[data-theme="dark"] .mark img.logo-dark{display:block;}
+  .back{
+    font-family:var(--f-display);font-size:var(--step-sm);font-weight:500;
+    color:var(--ink-soft);text-decoration:none;white-space:nowrap;
+  }
+  .back:hover{color:var(--ink);}
+
+  /* intro */
+  .intro{padding-block:clamp(34px,6vw,56px) clamp(20px,3vw,28px);}
+  h1{font-size:var(--step-3xl);font-weight:700;margin-top:12px;}
+  .lede{margin-top:18px;font-size:var(--step-lg);color:var(--ink-soft);}
+  .calm{
+    margin-top:14px;font-size:var(--step-md);color:var(--ink-soft);
+    border-left:3px solid var(--gold);padding-left:16px;
+  }
+  .actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px;}
+  .btn{
+    font-family:var(--f-display);font-size:var(--step-sm);font-weight:600;
+    text-decoration:none;padding:12px 20px;border-radius:3px;
+    display:inline-flex;align-items:center;gap:9px;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brand);color:var(--on-brand);}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .btn-primary{color:var(--brand-deep);}
+  }
+  :root[data-theme="dark"] .btn-primary{color:var(--brand-deep);}
+  .btn-primary:hover{filter:brightness(1.12);}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--brand);}
+
+  /* steps */
+  .steps{padding-block:clamp(26px,4vw,40px) clamp(40px,6vw,64px);}
+  .step{
+    display:grid;grid-template-columns:auto 1fr;gap:4px 18px;
+    padding-block:24px;border-top:1px solid var(--line);
+  }
+  .step:first-child{border-top:none;}
+  .num{
+    grid-row:1 / span 2;
+    font-family:var(--f-display);font-weight:700;font-size:1.5rem;
+    line-height:1;color:var(--gold);
+    font-variant-numeric:tabular-nums;padding-top:2px;min-width:1.4em;
+  }
+  .step h2{font-size:var(--step-xl);font-weight:700;}
+  .step-body{grid-column:2;}
+  .step-body p{margin-top:10px;color:var(--ink-soft);}
+  .step-body ol{margin:12px 0 0;padding-left:20px;color:var(--ink-soft);}
+  .step-body ol li{margin-bottom:7px;}
+  .step-body ol li::marker{color:var(--ink-faint);font-family:var(--f-display);font-size:.9em;}
+  b.ui{
+    font-family:var(--f-display);font-weight:600;font-size:.94em;
+    color:var(--ink);white-space:nowrap;
+  }
+  .note{
+    margin-top:14px;background:var(--surface-sunk);border:1px solid var(--line);
+    border-left:3px solid var(--gold);padding:13px 16px;
+    font-size:var(--step-sm);color:var(--ink-soft);line-height:1.6;
+  }
+
+  /* trouble + footer */
+  .trouble{background:var(--surface-sunk);border-block:1px solid var(--line);}
+  .trouble-in{padding-block:clamp(30px,5vw,44px);}
+  .trouble h2{font-size:var(--step-xl);font-weight:700;margin-top:10px;}
+  .trouble p{margin-top:12px;color:var(--ink-soft);}
+  footer{padding-block:28px 36px;}
+  .foot-in{
+    font-family:var(--f-display);font-size:var(--step-xs);color:var(--ink-faint);
+    display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;
+  }
+  .foot-in a{color:var(--ink-soft);text-decoration:none;}
+
+  @media print{
+    .site-head,.actions,.hazard{display:none!important;}
+    body{background:#fff;color:#000;font-size:11pt;}
+    .step{break-inside:avoid;}
+    .note{background:#f4f4f2;}
+  }
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="mark" href="/" aria-label="Safe Keepers Place Transport LLC — home">
+      <img class="logo-light" src="logo.png" width="560" height="168" alt="">
+      <img class="logo-dark" src="logo-dark.png" width="560" height="168" alt="">
+    </a>
+    <a class="back" href="/#drivers">&larr;&nbsp;Back to site</a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro">
+    <p class="eyebrow">Driver guide</p>
+    <h1>How to use Rider Log</h1>
+    <p class="lede">This app keeps your rider logs on your phone. At the end of the month you turn them into one PDF to hand in.</p>
+    <p class="calm">Take your time. Nothing gets deleted unless you answer yes to a question first.</p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://biggin62182.github.io/SKP-Rider-Log_PWA/" target="_blank" rel="noopener">Open Rider&nbsp;Log
+        <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="rider-log-guide.pdf" download>Download this guide
+        <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0 3.2-3.2M8 10 4.8 6.8M2.5 13h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <div class="hazard" role="presentation"></div>
+
+  <section class="wrap steps">
+
+    <article class="step">
+      <span class="num" aria-hidden="true">1</span>
+      <h2>Fill out a rider</h2>
+      <div class="step-body">
+        <ol>
+          <li>Type the student&rsquo;s name and address at the top.</li>
+          <li>Pick the month under <b class="ui">Month&nbsp;/&nbsp;Year</b>.</li>
+          <li>In the <b class="ui">Daily Log</b> boxes, mark each day you drove them. Use the AM box for morning and the PM box for afternoon. An X is fine.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">2</span>
+      <h2>Save it</h2>
+      <div class="step-body">
+        <p>Tap <b class="ui">Save Entry</b>.</p>
+        <p>The student&rsquo;s name now appears in the <b class="ui">Saved Logs</b> list, further down the screen.</p>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">3</span>
+      <h2>If the form goes blank, nothing is lost</h2>
+      <div class="step-body">
+        <div class="note">
+          Your work is safe. A blank form just means the app is ready for the next student.
+          Scroll down to <b class="ui">Saved Logs</b>, find the name, and tap <b class="ui">Edit</b>.
+          Everything comes back exactly as you left it.
+        </div>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">4</span>
+      <h2>Go back to a student later</h2>
+      <div class="step-body">
+        <ol>
+          <li>Scroll down to <b class="ui">Saved Logs</b>.</li>
+          <li>Tap <b class="ui">Edit</b> next to the name.</li>
+          <li>Change what you need, then tap <b class="ui">Save Entry</b> again.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">5</span>
+      <h2>Sign your name once</h2>
+      <div class="step-body">
+        <p>Draw your name with your finger in the signature box, then tap <b class="ui">Save Signature</b>.</p>
+        <p>You only do this one time. Your signature goes on every form you print from now on.</p>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">6</span>
+      <h2>Make the PDF to turn in</h2>
+      <div class="step-body">
+        <ol>
+          <li>Scroll down to <b class="ui">Saved Logs</b>.</li>
+          <li>Tap the small square next to each student you want included.</li>
+          <li>Tap <b class="ui">Compile Selected &rarr; PDF</b>. The PDF saves to your phone.</li>
+          <li>Tap <b class="ui">Share&nbsp;/&nbsp;Email PDF</b> to send it in.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">7</span>
+      <h2>Start the next month</h2>
+      <div class="step-body">
+        <p>Open the student, then tap <b class="ui">Start Next Month</b>.</p>
+        <p>The name and the miles stay. The day boxes empty out. The month moves forward one.</p>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">8</span>
+      <h2>Send a student to another driver</h2>
+      <div class="step-body">
+        <p>Do this when someone else will be driving one of your students.</p>
+        <ol>
+          <li>Tap the small square next to that student in <b class="ui">Saved Logs</b>.</li>
+          <li>Tap <b class="ui">Copy as Text</b>.</li>
+          <li>Open your text messages or email, paste it in, and send.</li>
+        </ol>
+        <p>The other driver taps <b class="ui">Paste Text</b>, pastes the message in, and taps <b class="ui">Add Riders</b>.</p>
+        <div class="note">
+          Marks you already made are never changed by this. If you marked the morning and they
+          marked the afternoon, you both end up with both.
+        </div>
+      </div>
+    </article>
+
+    <article class="step">
+      <span class="num" aria-hidden="true">9</span>
+      <h2>Keep a backup</h2>
+      <div class="step-body">
+        <p>Once a month, tap <b class="ui">Export All Data</b> and save the file somewhere safe, like your email.</p>
+        <p>That file is what gets your logs back if your phone is lost or replaced.</p>
+        <div class="note">
+          Your logs are kept on this phone only. They are not stored anywhere else,
+          so the backup file matters.
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="hazard" role="presentation"></div>
+
+  <section class="trouble">
+    <div class="wrap trouble-in">
+      <p class="eyebrow">If something looks wrong</p>
+      <h2>Tell us what the screen said.</h2>
+      <p>Look at the version number at the top of the screen, next to the words <b class="ui">Rider Log</b>. Tell whoever set this up what the screen said and what you tapped just before it happened.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>&copy; 2026 Safe Keepers Place Transport LLC &middot; Driver guide</span>
+    <span><a href="/">safekeepersplace.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
