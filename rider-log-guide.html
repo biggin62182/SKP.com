@@ -132,6 +132,27 @@
     font-family:var(--f-display);font-weight:600;font-size:.94em;
     color:var(--ink);white-space:nowrap;
   }
+  .setup{
+    background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);
+    padding:22px 24px 24px;margin-bottom:10px;
+  }
+  .setup h2{font-size:var(--step-lg);font-weight:700;}
+  .setup p{margin-top:11px;color:var(--ink-soft);}
+  .setup dl{margin:14px 0 0;}
+  .setup dt{
+    font-family:var(--f-display);font-weight:600;font-size:var(--step-sm);
+    color:var(--ink);margin-top:11px;
+  }
+  .setup dd{margin:3px 0 0;color:var(--ink-soft);}
+  .warn{
+    margin-top:14px;background:var(--surface);border:1px solid var(--line-strong);
+    border-left:3px solid #D1452B;padding:13px 16px;
+    font-size:var(--step-sm);color:var(--ink-soft);line-height:1.6;
+  }
+  .warn b.lead,.note b.lead{display:block;color:var(--ink);font-family:var(--f-display);
+    font-weight:700;font-size:var(--step-sm);margin-bottom:5px;}
+  .contact-line{margin-top:16px;font-size:var(--step-md);}
+  .contact-line a{font-weight:600;text-decoration-color:var(--gold);text-underline-offset:3px;}
   .note{
     margin-top:14px;background:var(--surface-sunk);border:1px solid var(--line);
     border-left:3px solid var(--gold);padding:13px 16px;
@@ -192,6 +213,18 @@
 
   <section class="wrap steps">
 
+    <article class="setup">
+      <h2>Before you start: put it on your home screen</h2>
+      <p>Rider Log works like a regular app once it&rsquo;s on your home screen. Do this first and you won&rsquo;t have to go looking for the link again.</p>
+      <dl>
+        <dt>On an iPhone</dt>
+        <dd>Open the link in Safari, tap the <b class="ui">Share</b> button at the bottom of the screen, scroll down, and tap <b class="ui">Add to Home Screen</b>.</dd>
+        <dt>On an Android phone</dt>
+        <dd>Open the link in Chrome, tap the <b class="ui">three dots</b> at the top right, and tap <b class="ui">Add to Home screen</b>.</dd>
+      </dl>
+      <p>From then on, open it from that icon. Your logs live in the app on your phone, so always coming back the same way keeps them where you can find them.</p>
+    </article>
+
     <article class="step">
       <span class="num" aria-hidden="true">1</span>
       <h2>Fill out a rider</h2>
@@ -243,6 +276,7 @@
       <div class="step-body">
         <p>Draw your name with your finger in the signature box, then tap <b class="ui">Save Signature</b>.</p>
         <p>You only do this one time. Your signature goes on every form you print from now on.</p>
+        <p>Signed it badly? Tap <b class="ui">Clear</b> in the signature box, draw it again, and tap <b class="ui">Save Signature</b>. The new one takes the place of the old one.</p>
       </div>
     </article>
 
@@ -299,6 +333,25 @@
       </div>
     </article>
 
+    <article class="step">
+      <span class="num" aria-hidden="true">10</span>
+      <h2>If you lose your logs</h2>
+      <div class="step-body">
+        <p>This is what the backup file is for. A new phone, a lost phone, or logs that have gone missing.</p>
+        <ol>
+          <li>Open Rider Log on the phone.</li>
+          <li>Scroll down to <b class="ui">Saved Logs</b>, then to <b class="ui">Backup &amp; Transfer</b>.</li>
+          <li>Tap <b class="ui">Import Data</b> and pick the backup file you saved.</li>
+        </ol>
+        <p>Your students and their day marks come back.</p>
+        <div class="note">
+          <b class="lead">Importing adds to what is already there.</b>
+          Marks you have already made are never overwritten, and anything missing is filled back in.
+          Nothing you have logged on this phone gets wiped out by bringing a backup in.
+        </div>
+      </div>
+    </article>
+
   </section>
 
   <div class="hazard" role="presentation"></div>
@@ -307,7 +360,9 @@
     <div class="wrap trouble-in">
       <p class="eyebrow">If something looks wrong</p>
       <h2>Tell us what the screen said.</h2>
-      <p>Look at the version number at the top of the screen, next to the words <b class="ui">Rider Log</b>. Tell whoever set this up what the screen said and what you tapped just before it happened.</p>
+      <p>Look at the version number at the top of the screen, next to the words <b class="ui">Rider Log</b> &mdash; a small tag like <b class="ui">v1.6.0</b>. Then tell Eric Freeman what the screen said and what you tapped just before it happened.</p>
+      <p class="contact-line">Call or text <a href="tel:+18164089019">816-408-9019</a><br>
+      Email <a href="mailto:ericfreeman62182@gmail.com">ericfreeman62182@gmail.com</a></p>
     </div>
   </section>
 </main>
